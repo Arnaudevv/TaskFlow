@@ -1,0 +1,285 @@
+:root {
+  --taskflow-ink: #17243b;
+  --taskflow-muted: #718096;
+  --taskflow-primary: #4f46e5;
+  --taskflow-background: #f4f6fb;
+}
+
+ion-header ion-toolbar {
+  --background: #ffffff;
+  --color: var(--taskflow-ink);
+  --border-color: transparent;
+  --min-height: 60px;
+}
+
+ion-header ion-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+ion-content.tasks-content,
+ion-content.form-content {
+  --background: var(--taskflow-background);
+}
+
+ion-tab-bar {
+  --background: #ffffff;
+  --color: #8993a5;
+  --color-selected: var(--taskflow-primary);
+  border-top: 1px solid #e8ebf2;
+  padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+  box-shadow: 0 -6px 24px rgb(23 36 59 / 5%);
+}
+
+ion-tab-button {
+  --color: #8993a5;
+  --color-selected: var(--taskflow-primary);
+  font-size: 0.72rem;
+}
+
+ion-tab-button ion-icon {
+  font-size: 1.25rem;
+}
+
+.tasks-intro {
+  padding: 28px 20px 20px;
+}
+
+.tasks-intro .eyebrow {
+  margin: 0 0 8px;
+  color: var(--taskflow-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.tasks-intro h1 {
+  margin: 0;
+  color: var(--taskflow-ink);
+  font-size: 1.65rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.tasks-intro > p:last-child {
+  margin: 7px 0 0;
+  color: var(--taskflow-muted);
+  font-size: 0.92rem;
+}
+
+ion-card.task-card,
+ion-card.form-card {
+  margin: 0 16px 14px;
+  border: 1px solid #e9edf4;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 26px rgb(23 36 59 / 6%);
+}
+
+ion-card.task-card ion-card-header,
+ion-card.form-card ion-card-header {
+  padding: 18px 18px 10px;
+}
+
+.task-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-heading ion-card-title,
+ion-card.form-card ion-card-title {
+  color: var(--taskflow-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.task-status {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #f0f2f7;
+  color: #647087;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.task-status.is-running {
+  background: #e8f7ef;
+  color: #18834c;
+}
+
+.task-status.is-done {
+  background: #eeebff;
+  color: #5446c8;
+}
+
+ion-card.task-card ion-card-content {
+  padding: 0 18px 14px;
+}
+
+.task-description {
+  margin: 0 0 14px;
+  color: #66738a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.task-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.task-badges ion-badge {
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.task-category {
+  --background: #eef0ff;
+  --color: #5146b9;
+}
+
+.task-priority {
+  --background: #fff3e5;
+  --color: #a45b08;
+}
+
+.task-timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e9eaff;
+  border-radius: 13px;
+  background: #f8f8ff;
+}
+
+.timer-caption {
+  margin: 0 0 3px;
+  color: var(--taskflow-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.timer-value {
+  margin: 0;
+  color: var(--taskflow-ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-button {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.task-dates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 12px;
+  padding: 12px 1px 5px;
+  color: var(--taskflow-muted);
+  font-size: 0.72rem;
+}
+
+ion-item.task-completion {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --min-height: 34px;
+  color: #59667b;
+  font-size: 0.85rem;
+}
+
+ion-item.task-completion ion-checkbox {
+  --size: 18px;
+  --checkbox-background-checked: var(--taskflow-primary);
+  --border-color-checked: var(--taskflow-primary);
+  margin-inline-end: 10px;
+}
+
+.empty-state {
+  margin: 0 16px;
+  padding: 30px 20px;
+  border: 1px dashed #cdd4e2;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.empty-state h2 {
+  margin: 0 0 8px;
+  color: var(--taskflow-ink);
+  font-size: 1.05rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: var(--taskflow-muted);
+  font-size: 0.9rem;
+}
+
+ion-card.form-card {
+  margin: 10px 0 20px;
+}
+
+ion-card.form-card ion-card-content {
+  padding: 0 18px 20px;
+}
+
+ion-card.form-card ion-item {
+  --background: #fbfcfe;
+  --border-color: #e7ebf2;
+  --border-radius: 12px;
+  --highlight-color-focused: var(--taskflow-primary);
+  margin: 8px 0 12px;
+  border: 1px solid #e7ebf2;
+  border-radius: 12px;
+}
+
+ion-card.form-card ion-text p {
+  margin: -5px 4px 8px;
+  font-size: 0.8rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.form-actions ion-button:first-child {
+  flex: 1;
+}
+
+@media (min-width: 700px) {
+  .tasks-intro,
+  ion-card.task-card,
+  .empty-state {
+    width: min(100% - 40px, 680px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .tasks-intro {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  ion-card.form-card {
+    width: min(100%, 680px);
+    margin: 20px auto;
+  }
+}
